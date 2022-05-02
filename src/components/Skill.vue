@@ -20,8 +20,8 @@ export default {
     name: 'Skill',
     props: ['skill'],
     components: {
-        // Show,
-        // Swiper,
+        Show,
+        Swiper,
     },
     data() {
       return {
