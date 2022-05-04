@@ -38,7 +38,7 @@ $large: 1200px;
         font-size: 0.8vw;
         padding: 0 5%;
         font-weight: 400;
-        @media screen and (max-width:$small) and (orientation: portrait) {
+        @media screen and (max-device-width:$small) and (orientation: portrait) {
             font-size: 3vw;
         }
     }

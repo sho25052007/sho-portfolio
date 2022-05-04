@@ -36,7 +36,7 @@ $large: 1200px;
     display: block;
     padding: 0 20%;
     text-align: left;
-    @media screen and (max-width:$small) and (orientation: portrait) {
+    @media screen and (max-device-width:$small) and (orientation: portrait) {
         padding: 0 10%;
     }
 }
@@ -45,10 +45,10 @@ $large: 1200px;
     font-weight: 600;
     font-size: 1.2vw;
     color: var(--bg-color);
-    @media screen and (max-width:$small) and (orientation: portrait) {
+    @media screen and (max-device-width:$small) and (orientation: portrait) {
         font-size: 4vw;
     }
-    @media screen and (min-width:$medium) and (max-width:$large) and (orientation: landscape) {
+    @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
         font-size: 1.8vw;
     }
 }
@@ -57,10 +57,10 @@ $large: 1200px;
     font-weight: 400;
     font-size: 0.8vw;
     color: var(--accent-color);
-    @media screen and (max-width:$small) and (orientation: portrait) {
+    @media screen and (max-device-width:$small) and (orientation: portrait) {
         font-size: 2.8vw;
     }
-    @media screen and (min-width:$medium) and (max-width:$large) and (orientation: landscape) {
+    @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
         font-size: 1.2vw;
     }
 }

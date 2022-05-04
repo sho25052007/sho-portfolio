@@ -117,7 +117,7 @@ export default {
         height: 120vh;
     }
     .bg-img {
-        @media screen and (max-width:$small) and (orientation: portrait) {
+        @media screen and (max-device-width:$small) and (orientation: portrait) {
             display: none;
         }
     }
@@ -161,14 +161,14 @@ export default {
             color: var(--primary-color);
             margin-top: 1vh;
         }
-        @media screen and (max-width:$small) and (orientation: portrait) {
+        @media screen and (max-device-width:$small) and (orientation: portrait) {
             padding: 3% 14%;
             .heading {
                 font-size: 7.2vw;
                 margin-top: 1vh;
             }
         }
-        @media screen and (min-width:$medium) and (max-width:$large) and (orientation: landscape) {
+        @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
             padding: 4% 16%;
             .heading {
                 font-size: 3.6vw;
@@ -186,7 +186,7 @@ export default {
             font-weight: 300;
             font-size: 1.4vw;
             color: var(--secondary-color);
-            @media screen and (max-width:$small) and (orientation: portrait) {
+            @media screen and (max-device-width:$small) and (orientation: portrait) {
                 font-size: 3vw;
             }
         }
@@ -233,10 +233,10 @@ export default {
         color: var(--dark-color);
         font-size: 1vw;
         margin: 0.6em 0;
-        @media screen and (max-width:$small) and (orientation: portrait) {
+        @media screen and (max-device-width:$small) and (orientation: portrait) {
             font-size: 3.2vw;
         }
-        @media screen and (min-width:$medium) and (max-width:$large) and (orientation: landscape) {
+        @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
             font-size: 1.6vw;
         }
     }

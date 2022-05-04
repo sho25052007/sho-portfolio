@@ -49,10 +49,10 @@ export default {
         width: 100vw;
         background-color: var(--bg-color);
         padding: 10%;
-        @media screen and (max-width:$small) and (orientation: portrait) {
+        @media screen and (max-device-width:$small) and (orientation: portrait) {
             padding: 14%;
         }
-        @media screen and (min-width:$medium) and (max-width:$large) and (orientation: landscape) {
+        @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
             padding: 16%;
         }
     }
@@ -77,7 +77,7 @@ export default {
             font-family: 'My Soul', cursive;
             color: var(--secondary-color);
         }
-        @media screen and (max-width:$small) and (orientation: portrait) {
+        @media screen and (max-device-width:$small) and (orientation: portrait) {
             .heading {
                 font-size: 8vw;
                 margin-top: 1vh;
@@ -86,7 +86,7 @@ export default {
                 font-size: 4vw;
             }
         }
-        @media screen and (min-width:$medium) and (max-width:$large) and (orientation: landscape) {
+        @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
             .heading {
                 font-size: 3.4vw;
                 margin-top: 0;
@@ -101,12 +101,12 @@ export default {
         display: inline-block;
         max-width: 12vw;
         max-height: 0%;
-        @media screen and (max-width:$small) and (orientation: portrait) {
+        @media screen and (max-device-width:$small) and (orientation: portrait) {
             max-width: 40vw;
             margin-top: 2vh;
         }
-        @media screen and (min-width:$medium) and (max-width:$large) and (orientation: landscape) {
-            max-width: 12vw;
+        @media screen and (min-device-width:$medium) and (max-device-device-width:$large) and (orientation: landscape) {
+            max-device-width: 12vw;
         }
     }
 

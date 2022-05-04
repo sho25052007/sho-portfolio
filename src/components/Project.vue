@@ -23,23 +23,25 @@
                 <h2 v-scroller="2" class="title px-2">{{ project.name }}</h2>
                 <div class="project-title mt-3 d-flex justify-space-between align-end">
                     <h3 v-scroller="3" class="paragraph px-2">{{ project.description }}</h3>
-                    <div v-scroller="3" class="git-action mr-3">
-                        <div class="d-flex justify-center align-items-end">
-                            <v-list-item class="link-item" :href="project.github" target="_blank">
-                                <h3 class="git-heading mr-1">CODE</h3>
-                            </v-list-item>
-                            <font-awesome-icon icon="fas fa-code" id="code-icon"/>
+                    <div class="action-btn d-flex">
+                        <div v-scroller="3" class="git-action mr-3">
+                            <div class="d-flex justify-center align-items-end">
+                                <v-list-item class="link-item" :href="project.github" target="_blank">
+                                    <h3 class="git-heading mr-1">CODE</h3>
+                                </v-list-item>
+                                <font-awesome-icon icon="fas fa-code" id="code-icon"/>
+                            </div>
+                            <span class="line"></span>
                         </div>
-                        <span class="line"></span>
-                    </div>
-                    <div v-scroller="3" class="view-action mr-3">
-                        <div class="d-flex justify-center align-items-end">
-                            <v-list-item class="link-item" :href="project.url" target="_blank">
-                                <h3 class="view-heading mr-1">VIEW</h3>
-                            </v-list-item>
-                            <font-awesome-icon icon="fas fa-eye" id="view-icon"/>
+                        <div v-scroller="3" class="view-action mr-3">
+                            <div class="d-flex justify-center align-items-end">
+                                <v-list-item class="link-item" :href="project.url" target="_blank">
+                                    <h3 class="view-heading mr-1">VIEW</h3>
+                                </v-list-item>
+                                <font-awesome-icon icon="fas fa-eye" id="view-icon"/>
+                            </div>
+                            <span class="line"></span>
                         </div>
-                        <span class="line"></span>
                     </div>
                 </div>
             </v-col>
@@ -91,7 +93,7 @@ export default {
             // letter-spacing: -0.2rem !important;
         }
 
-        @media screen and (max-width:$small) and (orientation: portrait) {
+        @media screen and (max-device-width:$small) and (orientation: portrait) {
             h2.title{
                 font-size: 10vw !important;
             }
@@ -99,7 +101,7 @@ export default {
                 font-size: 4vw !important;
             }
         }
-        @media screen and (min-width:$medium) and (max-width:$large) and (orientation: landscape) {
+        @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
             h2.title{
                 font-size: 4vw !important;
             }
@@ -224,7 +226,7 @@ export default {
     }
 
 
-    @media screen and (min-width:$large) {
+    @media screen and (min-device-width:$large) {
         .project-info:hover {
             .project-pic-front {
                 opacity: 1;

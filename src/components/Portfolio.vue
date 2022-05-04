@@ -47,10 +47,10 @@ export default {
         width: 100vw;
         background-color: var(--bg-color);
         padding: 5% 10%;
-        @media screen and (max-width:$small) and (orientation: portrait) {
+        @media screen and (max-device-width:$small) and (orientation: portrait) {
             padding: 7% 14%;
         }
-        @media screen and (min-width:$medium) and (max-width:$large) and (orientation: landscape) {
+        @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
             padding: 8% 16%;
         }
     }
@@ -78,7 +78,7 @@ export default {
             color: var(--secondary-color);
         }
 
-        @media screen and (max-width:$small) and (orientation: portrait) {
+        @media screen and (max-device-width:$small) and (orientation: portrait) {
             .heading {
                 font-size: 8vw;
                 margin-top: 1vh;
@@ -87,7 +87,7 @@ export default {
                 font-size: 3vw;
             }
         }
-        @media screen and (min-width:$medium) and (max-width:$large) and (orientation: landscape) {
+        @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
             .heading {
                 font-size: 3.4vw;
                 // margin-top: 0;
