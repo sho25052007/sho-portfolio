@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    $small: 400px;
+    $small: 500px;
     $medium: 800px;
     $large: 1200px;
 
