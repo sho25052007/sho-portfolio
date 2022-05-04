@@ -93,7 +93,7 @@ export default {
             // letter-spacing: -0.2rem !important;
         }
 
-        @media screen and (max-device-width:$small) and (orientation: portrait) {
+        @media screen and (max-device-width:$small) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
             h2.title{
                 font-size: 10vw !important;
                 letter-spacing: 0rem !important;
