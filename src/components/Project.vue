@@ -96,6 +96,7 @@ export default {
         @media screen and (max-device-width:$small) and (orientation: portrait) {
             h2.title{
                 font-size: 10vw !important;
+                letter-spacing: 0rem !important;
             }
             h3.paragraph{
                 font-size: 4vw !important;
@@ -104,6 +105,7 @@ export default {
         @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
             h2.title{
                 font-size: 4vw !important;
+                letter-spacing: 0rem !important;
             }
             h3.paragraph{
                 font-size: 1.6vw !important;
