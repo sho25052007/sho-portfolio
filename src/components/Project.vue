@@ -6,18 +6,18 @@
             <!-- center space for project image and hover details-->
             <v-col class="col-md-4">
                 <div class="project-info d-flex align-start justify-end">
-                    <div class="details d-flex flex-column justify-space-between">
+                    <v-card class="image-card rounded-lg" elevation="0" :href="project.url" target="_blank">
+                        <v-img v-slider :src="project.imgB" class="project-pic-front rounded-lg" fill></v-img>
+                        <v-img v-slider :src="project.imgA" class="project-pic-back rounded-lg" fill></v-img>
+                        <div class="cover"></div>
+                    </v-card>
+                    <div v-if="loaded" class="details d-flex flex-column justify-space-between">
                         <h3 class="detail-text text-right">{{ project.full_info }}</h3>
                         <div class="tech-stack text-right d-flex flex-column">
                             <h2 class="sub-title">TECH STACK</h2>
                             <h3 v-for="(stack, index) in project.stack" :key="index" class="sub-text">{{ stack }}</h3>
                         </div>
                     </div>
-                    <v-card class="image-card rounded-lg" elevation="0" :href="project.url" target="_blank">
-                        <v-img v-slider :src="project.imgB" class="project-pic-front rounded-lg" fill></v-img>
-                        <v-img v-slider :src="project.imgA" class="project-pic-back rounded-lg" fill></v-img>
-                        <div class="cover"></div>
-                    </v-card>
                 </div>
             </v-col>
             <!-- right space for title and brief -->
@@ -66,7 +66,21 @@ export default {
         slider,
         indenter
     },
-    props: ['project']
+    props: ['project'],
+    data() {
+        return {
+            loaded: false
+        }
+    },
+    mounted() {
+         document.onreadystatechange = () => {
+    if (document.readyState == "complete") {
+        this.loaded = true
+    }}
+    },
+    destroyed() {
+        this.loaded = false
+    }
 }
 </script>
 
@@ -247,7 +261,7 @@ export default {
 
     .image-card {
         height: 40vh;
-        z-index: 100;
+        z-index: 20;
     }
 
     .details {

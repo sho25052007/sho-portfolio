@@ -16,18 +16,23 @@ export default {
       Homepage
      },
   mounted() {
-    this.loading = true
     setTimeout(() => {
+      this.loading = true
       this.loadAnimate = true
-    }, 100)
-    setTimeout(() => {
+    },100)
+
+    document.onreadystatechange = () => {
+    if (document.readyState == "complete") {
+      setTimeout(() => {
       this.loadAnimate = false
       this.loading = false
-      }, 1500) //fake loading -- replace with vuex store
+        }, 1000)
+      }
+    }
   },
   data() {
       return {
-          loading: false,
+          loading: true,
           loadAnimate: false
       }
   },
