@@ -4,11 +4,11 @@
             <div class="logo">
                 <p class='logo-txt'>SHO SUZUKI PORTFOLIO {{year}}</p>
             </div>
-            <div class="extra-links d-flex justify-space-evenly">
+            <!-- <div class="extra-links d-flex justify-space-evenly">
                 <p class='tag mx-5'>LINK TO CV</p>
                 <p class="tag">|</p>
                 <p class='tag mx-5'>CODE FOR PORTFOLIO</p>
-            </div>
+            </div> -->
         </v-container>
     </v-footer>
 </template>
@@ -19,49 +19,50 @@
         },
         computed:{
             year(){
-                var d = new Date();
+                const d = new Date();
                 return  d.getFullYear();
             }
         },
     }
 </script>
 <style lang="scss" scoped>
-$small: 400px;
+$x-small: 300px;
+$small: 500px;
 $medium: 800px;
 $large: 1200px;
 #footer {
-    background-color:var(--dark-color);
+    background-color:var(--primary-color);
 }
 .signature {
     display: block;
     padding: 0 20%;
-    text-align: left;
-    @media screen and (max-device-width:$small) and (orientation: portrait) {
+    text-align: center;
+    @media screen and (min-device-width:$x-small) and (max-device-width:$small) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
         padding: 0 10%;
     }
 }
 .logo-txt{
-    margin: 0.5em;
-    font-weight: 600;
+    margin: 0.4em;
+    font-weight: 400;
     font-size: 1.2vw;
     color: var(--bg-color);
-    @media screen and (max-device-width:$small) and (orientation: portrait) {
+    @media screen and (min-device-width:$x-small) and (max-device-width:$small) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
         font-size: 4vw;
     }
     @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
         font-size: 1.8vw;
     }
 }
-.tag{
-    margin: 0.5em;
-    font-weight: 400;
-    font-size: 0.8vw;
-    color: var(--accent-color);
-    @media screen and (max-device-width:$small) and (orientation: portrait) {
-        font-size: 2.8vw;
-    }
-    @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
-        font-size: 1.2vw;
-    }
-}
+// .tag{
+//     margin: 0.5em;
+//     font-weight: 400;
+//     font-size: 0.8vw;
+//     color: var(--accent-color);
+//     @media screen and (min-device-width:$x-small) and (max-device-width:$small) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
+//         font-size: 2.8vw;
+//     }
+//     @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
+//         font-size: 1.2vw;
+//     }
+// }
 </style>

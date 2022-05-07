@@ -106,7 +106,11 @@ export default new Vuex.Store({
                 info:"Small online retail business logo for Vietnamese hot sauce." },
             ]
         },
-    ]
+    ],
+        extras:
+            {cvLink: '/sho_CV.pdf',
+            codeLink: 'https://github.com/sho25052007/sho-portfolio'},
+
   },
   getters:{
       projects: (state) => {
@@ -114,6 +118,9 @@ export default new Vuex.Store({
       },
       skills: (state) => {
           return state.skills
+      },
+      extras: (state) => {
+          return state.extras
       }
   },
 })

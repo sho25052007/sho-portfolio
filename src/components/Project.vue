@@ -13,9 +13,11 @@
                             <h3 v-for="(stack, index) in project.stack" :key="index" class="sub-text">{{ stack }}</h3>
                         </div>
                     </div>
-                    <v-img v-slider :src="project.imgB" class="project-pic-front rounded-lg" fill></v-img>
-                    <v-img v-slider :src="project.imgA" class="project-pic-back rounded-lg" fill></v-img>
-                    <div class="cover"></div>
+                    <v-card class="image-card rounded-lg" elevation="0" :href="project.url" target="_blank">
+                        <v-img v-slider :src="project.imgB" class="project-pic-front rounded-lg" fill></v-img>
+                        <v-img v-slider :src="project.imgA" class="project-pic-back rounded-lg" fill></v-img>
+                        <div class="cover"></div>
+                    </v-card>
                 </div>
             </v-col>
             <!-- right space for title and brief -->
@@ -243,6 +245,11 @@ export default {
         }
     }
 
+    .image-card {
+        height: 40vh;
+        z-index: 100;
+    }
+
     .details {
         position: absolute;
         height: 38vh;
@@ -276,5 +283,10 @@ export default {
     .before-enter {
         opacity: 0;
         transform: translateY(40px);
+    }
+    .action-btn {
+        .v-list-item:hover {
+            color: transparent;
+        }
     }
 </style>

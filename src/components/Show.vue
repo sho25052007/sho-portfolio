@@ -21,7 +21,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$small: 400px;
+$x-small: 300px;
+$small: 500px;
 $medium: 800px;
 $large: 1200px;
 
@@ -38,7 +39,7 @@ $large: 1200px;
         font-size: 0.8vw;
         padding: 0 5%;
         font-weight: 400;
-        @media screen and (max-device-width:$small) and (orientation: portrait) {
+        @media screen and (min-device-width:$x-small) and (max-device-width:$small) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
             font-size: 3vw;
         }
     }

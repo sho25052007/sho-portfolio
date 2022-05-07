@@ -10,7 +10,7 @@
                     </v-col>
                     <v-col class="col-md-6 text-left d-flex flex-column justify-end">
                         <h1 v-scroller="1.5" class="heading">WEBSIT<span class="emph">E</span>S <span class="paren">(and)</span></h1>
-                        <h1 v-scroller="2" class="heading">FURNIT<span class="emph">U</span>RES, <span class="paren">(with)</span></h1>
+                        <h1 v-scroller="2" class="heading">FURNIT<span class="emph">U</span>RE, <span class="paren">(with)</span></h1>
                     </v-col>
                 </v-row>
                 <v-row class="mt-0">
@@ -40,7 +40,8 @@ export default {
 
 
 <style lang="scss" scoped>
-    $small: 400px;
+    $x-small: 300px;
+    $small: 500px;
     $medium: 800px;
     $large: 1200px;
 
@@ -49,7 +50,7 @@ export default {
         width: 100vw;
         background-color: var(--bg-color);
         padding: 10%;
-        @media screen and (max-device-width:$small) and (orientation: portrait) {
+        @media screen and (min-device-width:$x-small) and (max-device-width:$small) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
             padding: 14%;
         }
         @media screen and (min-device-width:$medium) and (max-device-width:$large) and (orientation: landscape) {
@@ -77,7 +78,7 @@ export default {
             font-family: 'My Soul', cursive;
             color: var(--secondary-color);
         }
-        @media screen and (max-device-width:$small) and (orientation: portrait) {
+        @media screen and (min-device-width:$x-small) and (max-device-width:$small) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
             .heading {
                 font-size: 8vw;
                 margin-top: 1vh;
@@ -101,7 +102,7 @@ export default {
         display: inline-block;
         max-width: 12vw;
         max-height: 0%;
-        @media screen and (max-device-width:$small) and (orientation: portrait) {
+        @media screen and (min-device-width:$x-small) and (max-device-width:$small) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
             max-width: 40vw;
             margin-top: 2vh;
         }

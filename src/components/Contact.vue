@@ -6,15 +6,15 @@
             <v-col class="info-text" xs="12"  sm="12" md="6">
                  <h2 >
                      Let's
-                     <v-icon>
-                        mdi-arrow-right
-                     </v-icon>
+                     <font-awesome-icon icon="fa-solid fa-reply" transform="shrink-2" id="reply-icon" />
                  </h2>
                  <h2>
                      Connect
                  </h2>
                  <p>
-                     Hope to hear from you! Please don't hesitate to send us any message you like and I'll get back to you!
+                     Hope to hear from you!
+                     <br>
+                     Please don't hesitate to send me a message!
                  </p>
             </v-col>
 
@@ -126,6 +126,7 @@
         color:var(--secondary-color);
         font-weight: 400;
         font-size: 1.2em;
+        margin-top: 1em;
     }
 }
 
