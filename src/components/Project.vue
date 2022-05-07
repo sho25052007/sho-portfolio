@@ -73,14 +73,14 @@ export default {
         }
     },
     mounted() {
-         document.onreadystatechange = () => {
-    if (document.readyState == "complete") {
-        this.loaded = true
-    }}
-    },
-    destroyed() {
         this.loaded = false
-    }
+        document.onreadystatechange = () => {
+        if (document.readyState == "complete") {
+            setTimeout(() => {
+            this.loaded = true
+            }, 100)
+        }}
+    },
 }
 </script>
 
